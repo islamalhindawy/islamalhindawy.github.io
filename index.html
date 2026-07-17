@@ -2,52 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Islam G. Alhindawy</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; background: #0f172a; color: white; font-family: 'Segoe UI', sans-serif; overflow: hidden; }
-        .container { display: flex; flex-direction: column; height: 100vh; padding: 10px; gap: 10px; }
-        
-        /* Banner - Optimized */
-        .banner { height: 35%; width: 100%; background-image: url('banner.jpg'); background-size: cover; background-position: center; border-radius: 10px; }
-        
-        /* Header - Clean */
-        .header { display: flex; align-items: center; gap: 20px; height: 20%; padding: 0 10px; }
-        .photo { width: 130px; height: 130px; border-radius: 15px; border: 3px solid #3b82f6; object-fit: cover; }
-        .info h1 { margin: 0; font-size: 1.8rem; }
-        .info p { margin: 5px 0; color: #94a3b8; font-size: 0.9rem; }
-
-        /* Grid - 4, 4, 2 with breathing room */
-        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; height: 45%; }
-        .btn { background: #1e293b; border: 1px solid #334155; color: white; border-radius: 10px; display: flex; align-items: center; padding: 10px 15px; cursor: pointer; transition: 0.3s; }
-        .btn:hover { background: #3b82f6; }
-        .btn i { margin-right: 10px; font-size: 1.2rem; }
+        body { margin: 0; background: #0f172a; color: white; font-family: sans-serif; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+        .banner { height: 30%; width: 100%; background: url('banner.jpg') center/cover no-repeat; }
+        .profile-section { display: flex; align-items: center; padding: 15px; gap: 20px; height: 20%; }
+        .img-box { width: 120px; height: 120px; border-radius: 10px; border: 2px solid white; object-fit: cover; }
+        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 10px; height: 45%; }
+        .btn { background: #1e293b; border: 1px solid #334155; color: white; padding: 10px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="banner"></div>
-        <div class="header">
-            <img src="3. 5 xx  4.JPG" class="photo">
-            <div class="info">
-                <h1>Dr. Islam G. Alhindawy</h1>
-                <p>Ph.D. in Materials Chemistry</p>
-                <p>Materials Scientist | Nanotech & Renewable Energy | Mining & Mineral Processing Projects Leader | Water Treatment & Environmental Remediation | Academic–Industry Collaborator | Principal & Research Scientist | Operations Manager | Industrial Chemist | Lecturer</p>
-            </div>
+    <div class="banner"></div>
+    <div class="profile-section">
+        <img src="3. 5 xx  4.JPG" class="img-box">
+        <div>
+            <h1 style="margin:0;">Dr. Islam G. Alhindawy</h1>
+            <p style="margin:5px 0; color:#94a3b8;">Ph.D. in Materials Chemistry</p>
+            <p style="font-size:0.8rem;">Materials Scientist | Nanotech & Renewable Energy | Mining & Mineral Processing Projects Leader | Water Treatment & Environmental Remediation | Academic–Industry Collaborator | Principal & Research Scientist | Operations Manager | Industrial Chemist | Lecturer</p>
         </div>
-        <div class="grid">
-            <button class="btn"><i class="fa-solid fa-address-card"></i> Summary</button>
-            <button class="btn"><i class="fa-solid fa-briefcase"></i> Experience</button>
-            <button class="btn"><i class="fa-solid fa-graduation-cap"></i> Education</button>
-            <button class="btn"><i class="fa-solid fa-flask-vial"></i> Skills</button>
-            <button class="btn"><i class="fa-solid fa-certificate"></i> Patents</button>
-            <button class="btn"><i class="fa-solid fa-newspaper"></i> Publications</button>
-            <button class="btn"><i class="fa-solid fa-book-open"></i> Books</button>
-            <button class="btn"><i class="fa-solid fa-images"></i> Gallery</button>
-            <button class="btn" style="grid-column: span 2; justify-content: center;"><i class="fa-solid fa-user-graduate"></i> Academic Profiles</button>
-            <button class="btn" style="grid-column: span 2; justify-content: center;"><i class="fa-solid fa-envelope"></i> Contact Info</button>
-        </div>
+    </div>
+    <div class="grid">
+        <button class="btn">Summary</button><button class="btn">Experience</button><button class="btn">Education</button><button class="btn">Skills</button>
+        <button class="btn">Patents</button><button class="btn">Publications</button><button class="btn">Books</button><button class="btn">Gallery</button>
+        <button class="btn" style="grid-column: span 2;">Academic Profiles</button><button class="btn" style="grid-column: span 2;">Contact Info</button>
     </div>
 </body>
 </html>
