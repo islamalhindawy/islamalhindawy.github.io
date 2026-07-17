@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <title>Dr. Islam G. Alhindawy</title>
     <style>
-        body { margin: 0; background-color: #262626; color: white; font-family: sans-serif; overflow: hidden; }
+        body { margin: 0; background-color: #262626; color: white; font-family: 'Segoe UI', sans-serif; overflow: hidden; }
         .banner { width: 100%; height: 300px; background: url('banner.jpg') center/cover no-repeat; }
-        .header-name { text-align: center; color: #3498db; font-size: 4rem; margin: 10px 0; font-weight: bold; }
-        .main-container { display: flex; padding: 0 20px; gap: 30px; align-items: flex-start; margin-top: -10px; }
-        .profile-img { width: 260px; border: 4px solid #444; margin-top: -20px; }
-        .info-section { flex-grow: 1; margin-top: -20px; }
-        .job-title { color: #e74c3c; font-size: 1.6rem; font-weight: bold; margin-bottom: 10px; }
-        .bio-line { font-size: 1.15rem; margin-bottom: 5px; color: #ecf0f1; }
+        .header-name { text-align: center; color: #3498db; font-size: 4rem; margin: 15px 0; font-weight: bold; }
+        .main-container { display: flex; padding: 0 20px; gap: 30px; align-items: flex-start; }
         
-        .nav-box { background: #333; padding: 15px; border-radius: 5px; width: 500px; }
-        .nav-title { font-size: 1.3rem; margin-bottom: 15px; border-bottom: 1px solid #555; padding-bottom: 5px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .profile-img { width: 260px; border: 4px solid #444; }
+        
+        /* ضبط أماكن السطور */
+        .info-section { flex-grow: 1; margin-top: 25px; } 
+        .job-title { color: #e74c3c; font-size: 1.6rem; font-weight: bold; margin-bottom: 15px; }
+        .bio-line { font-size: 1.15rem; margin-bottom: 7px; color: #ecf0f1; }
+        
+        /* تنسيق قائمة التنقل */
+        .nav-box { background: #333; padding: 20px; border-radius: 5px; width: 500px; margin-top: 10px; }
+        .nav-title { font-size: 1.4rem; margin-bottom: 20px; border-bottom: 2px solid #555; padding-bottom: 10px; text-align: center; color: #3498db; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .btn { padding: 12px; background: #87CEEB; border: none; color: black; border-radius: 4px; cursor: pointer; font-weight: bold; text-align: center; transition: 0.3s; font-size: 0.9rem; width: 100%; }
         .btn:hover { background: #5F9EA0; }
     </style>
@@ -25,7 +30,6 @@
     <div class="header-name">Dr. Islam G. Alhindawy</div>
     
     <div class="main-container">
-        <!-- تأكد أن اسم الصورة في المستودع هو profile.jpg -->
         <img src="profile.jpg" class="profile-img">
         
         <div class="info-section">
@@ -41,7 +45,7 @@
         </div>
 
         <div class="nav-box">
-            <div class="nav-title">Navigation menu & Section</div>
+            <div class="nav-title">Navigation Menu & Section</div>
             <div class="grid">
                 <button class="btn">Professional Summary</button><button class="btn">Career Experience</button>
                 <button class="btn">Academic Education</button><button class="btn">Technical Skillsets</button>
