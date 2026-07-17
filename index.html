@@ -2,67 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>Dr. Islam G. Alhindawy</title>
     <style>
-        body { margin: 0; background-color: #1a1a1a; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; width: 100%; max-width: 900px; margin-top: 50px; }
-        .btn { padding: 15px; background-color: #2c3e50; color: white; border: 1px solid #3498db; cursor: pointer; border-radius: 5px; transition: 0.3s; font-weight: bold; }
-        .btn:hover { background-color: #3498db; }
+        body { margin: 0; background-color: #262626; color: white; font-family: 'Segoe UI', sans-serif; overflow: hidden; }
+        .banner { width: 100%; height: 300px; background: url('banner.jpg') center/cover no-repeat; }
+        .header-name { text-align: center; color: #3498db; font-size: 4rem; margin: 10px 0; font-weight: bold; }
+        .main-container { display: flex; padding: 0 20px; gap: 30px; align-items: flex-start; }
         
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; }
-        .modal-content { background: #262626; padding: 40px; width: 80%; max-width: 800px; border-radius: 10px; border: 1px solid #3498db; position: relative; max-height: 80vh; overflow-y: auto; line-height: 1.6; }
-        .close-btn { position: absolute; top: 15px; right: 25px; cursor: pointer; font-size: 2.5rem; color: #3498db; }
+        .profile-img { width: 260px; border: 4px solid #444; }
+        
+        .info-section { flex-grow: 1; margin-top: 5px; margin-left: 20px; } 
+        .job-title { color: #e74c3c; font-size: 1.6rem; font-weight: bold; margin-bottom: 12px; }
+        .bio-line { font-size: 1.15rem; margin-bottom: 6px; color: #ecf0f1; }
+        
+        .nav-box { background: #333; padding: 15px; border-radius: 5px; width: 500px; margin-top: 5px; }
+        .nav-title { font-size: 1.3rem; margin-bottom: 15px; border-bottom: 2px solid #555; padding-bottom: 10px; text-align: center; color: #3498db; font-weight: bold; text-transform: uppercase; }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .btn { padding: 12px; background: #87CEEB; border: none; color: black; border-radius: 4px; cursor: pointer; font-weight: bold; text-align: center; transition: 0.3s; font-size: 0.9rem; width: 100%; }
+        .btn:hover { background: #5F9EA0; }
     </style>
 </head>
 <body>
+    <div class="banner"></div>
+    <div class="header-name">Dr. Islam G. Alhindawy</div>
+    
+    <div class="main-container">
+        <img src="profile.jpg?v=7" class="profile-img">
+        
+        <div class="info-section">
+            <div class="job-title">Ph.D. in Materials Chemistry</div>
+            <div class="bio-line">Materials Scientist & Chemist |</div>
+            <div class="bio-line">Nanotechnology & Renewable Energy Expert |</div>
+            <div class="bio-line">Mining & Mineral Processing Projects Leader |</div>
+            <div class="bio-line">Water Treatment & Environmental Remediation |</div>
+            <div class="bio-line">Academic–Industry Collaborator |</div>
+            <div class="bio-line">Principal & Research Scientist |</div>
+            <div class="bio-line">Operations Manager | Industrial Chemist |</div>
+            <div class="bio-line">Lecturer</div>
+        </div>
 
-    <div class="grid">
-        <button class="btn" onclick="openModal('summary')">Professional Summary</button>
-        <button class="btn" onclick="openModal('experience')">Career Experience</button>
-        <button class="btn" onclick="openModal('education')">Academic Education</button>
-        <button class="btn" onclick="openModal('skills')">Technical Skills</button>
-        <button class="btn" onclick="openModal('patents')">Patents & Innovation</button>
-        <button class="btn" onclick="openModal('publications')">Research Publications</button>
-        <button class="btn" onclick="openModal('books')">Published Books</button>
-        <button class="btn" onclick="openModal('gallery')">Field & Lab Gallery</button>
-        <button class="btn" onclick="openModal('profiles')">Academic Profiles</button>
-        <button class="btn" onclick="openModal('contact')">Contact Information</button>
-    </div>
-
-    <div id="mainModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="document.getElementById('mainModal').style.display='none'">&times;</span>
-            <div id="modalBody"></div>
+        <div class="nav-box">
+            <div class="nav-title">Navigation Menu & Section</div>
+            <div class="grid">
+                <button class="btn">Professional Summary</button><button class="btn">Career Experience</button>
+                <button class="btn">Academic Education</button><button class="btn">Technical Skills</button>
+                <button class="btn">Patents & Innovation</button><button class="btn">Research Publications</button>
+                <button class="btn">Published Books</button><button class="btn">Field & Lab Gallery</button>
+                <button class="btn">Academic Profiles</button><button class="btn">Contact Information</button>
+            </div>
         </div>
     </div>
-
-    <script>
-        const contentData = {
-            summary: `
-                <h2>Professional Summary</h2>
-                <p>Dr. Islam G. Alhindawy is a highly accomplished multidisciplinary professional, scientist, and academician holding a Ph.D. in Materials Chemistry. He currently serves as the Project Leader for a pivotal nuclear ore dissolution and extraction initiative, where he oversees complex operational workflows and rigorous scientific investigations. His expertise is deeply rooted in the advanced application of nanotechnology, photocatalysis, and the development of third-generation solar cells, which he leverages to provide innovative solutions for critical challenges within energy science and environmental remediation.</p>
-                <p>Dr. Alhindawy has established a robust scholarly presence in the field of materials science, having authored and contributed to numerous high-impact research publications. His work continues to shape advancements in material properties and applications, bridging the gap between cutting-edge theoretical research and practical industrial implementation. His professional practice is characterized by stringent laboratory standards, data-driven analytical approaches, and effective leadership in high-impact energy projects. Furthermore, as a dedicated educator, he has authored comprehensive university-level educational resources, including the textbook 'General Chemistry in Energy Science,' alongside a series of practical problem-solving materials designed to enhance the academic proficiency of the next generation of scientists.</p>
-                <h3>Vision</h3>
-                <p>To be a global leader in materials science and nuclear energy research, driving sustainable technological breakthroughs that address the world's most pressing energy and environmental challenges through innovation and scientific excellence.</p>
-                <h3>Mission</h3>
-                <p>To bridge the gap between advanced academic research and industrial application, fostering the development of efficient energy solutions while upholding the highest standards of scientific rigor, environmental safety, and educational mentorship to empower future generations of researchers.</p>
-            `,
-            experience: `<h2>Career Experience</h2><p>Content for this section is under preparation.</p>`,
-            education: `<h2>Academic Education</h2><p>Content for this section is under preparation.</p>`,
-            skills: `<h2>Technical Skills</h2><p>Content for this section is under preparation.</p>`,
-            patents: `<h2>Patents & Innovation</h2><p>Content for this section is under preparation.</p>`,
-            publications: `<h2>Research Publications</h2><p>Content for this section is under preparation.</p>`,
-            books: `<h2>Published Books</h2><p>Content for this section is under preparation.</p>`,
-            gallery: `<h2>Field & Lab Gallery</h2><p>Content for this section is under preparation.</p>`,
-            profiles: `<h2>Academic Profiles</h2><p>Content for this section is under preparation.</p>`,
-            contact: `<h2>Contact Information</h2><p>Content for this section is under preparation.</p>`
-        };
-
-        function openModal(key) {
-            document.getElementById('modalBody').innerHTML = contentData[key];
-            document.getElementById('mainModal').style.display = 'flex';
-        }
-    </script>
 </body>
 </html>
