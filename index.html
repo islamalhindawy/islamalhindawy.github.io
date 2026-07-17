@@ -9,24 +9,19 @@
         .banner { width: 100%; height: 300px; background: url('banner.jpg') center/cover no-repeat; }
         .header-name { text-align: center; color: #3498db; font-size: 4rem; margin: 10px 0; font-weight: bold; }
         .main-container { display: flex; padding: 0 20px; gap: 30px; align-items: flex-start; flex-wrap: wrap; }
-        
         .profile-img { width: 260px; border: 4px solid #444; }
-        
         .info-section { flex-grow: 1; margin-top: 5px; margin-left: 20px; } 
         .job-title { color: #e74c3c; font-size: 1.6rem; font-weight: bold; margin-bottom: 12px; }
         .bio-line { font-size: 1.15rem; margin-bottom: 6px; color: #ecf0f1; }
-        
         .nav-box { background: #333; padding: 15px; border-radius: 5px; width: 500px; margin-top: 5px; }
         .nav-title { font-size: 1.3rem; margin-bottom: 15px; border-bottom: 2px solid #555; padding-bottom: 10px; text-align: center; color: #3498db; font-weight: bold; text-transform: uppercase; }
-        
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
         .btn { padding: 12px; background: #87CEEB; border: none; color: black; border-radius: 4px; cursor: pointer; font-weight: bold; text-align: center; transition: 0.3s; font-size: 0.9rem; width: 100%; }
         .btn:hover { background: #5F9EA0; }
-
-        /* Modal Styles */
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center; }
         .modal-content { background: #262626; padding: 40px; width: 80%; max-width: 800px; border-radius: 10px; border: 1px solid #3498db; position: relative; max-height: 80vh; overflow-y: auto; line-height: 1.6; }
         .close-btn { position: absolute; top: 15px; right: 25px; cursor: pointer; font-size: 2.5rem; color: #3498db; }
+        a { color: #3498db; }
     </style>
 </head>
 <body>
@@ -65,7 +60,6 @@
         </div>
     </div>
 
-    <!-- Modal System -->
     <div id="mainModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="document.getElementById('mainModal').style.display='none'">&times;</span>
@@ -76,23 +70,18 @@
     <script>
         const contentData = {
             summary: `<h2>Professional Summary</h2><p>Dr. Islam G. Alhindawy is a highly accomplished multidisciplinary professional, scientist, and academician holding a Ph.D. in Materials Chemistry. He currently serves as the Project Leader for a pivotal nuclear ore dissolution and extraction initiative, where he oversees complex operational workflows and rigorous scientific investigations. His expertise is deeply rooted in the advanced application of nanotechnology, photocatalysis, and the development of third-generation solar cells, which he leverages to provide innovative solutions for critical challenges within energy science and environmental remediation.</p><p>Dr. Alhindawy has established a robust scholarly presence in the field of materials science, having authored and contributed to numerous high-impact research publications. His work continues to shape advancements in material properties and applications, bridging the gap between cutting-edge theoretical research and practical industrial implementation. His professional practice is characterized by stringent laboratory standards, data-driven analytical approaches, and effective leadership in high-impact energy projects. Furthermore, as a dedicated educator, he has authored comprehensive university-level educational resources, including the textbook 'General Chemistry in Energy Science,' alongside a series of practical problem-solving materials designed to enhance the academic proficiency of the next generation of scientists.</p><h3>Vision</h3><p>To be a global leader in materials science and nuclear energy research, driving sustainable technological breakthroughs that address the world's most pressing energy and environmental challenges through innovation and scientific excellence.</p><h3>Mission</h3><p>To bridge the gap between advanced academic research and industrial application, fostering the development of efficient energy solutions while upholding the highest standards of scientific rigor, environmental safety, and educational mentorship to empower future generations of researchers.</p>`,
-            experience: `<h2>Career Experience</h2><p>Content to be added.</p>`,
             education: `<h2>Academic Education</h2>
-    <p><strong>Ph.D. in Chemistry / Materials Science (2022)</strong><br>
-    Faculty of Science, Ain Shams University, Egypt<br>
-    <em>Thesis: "Design and Synthesis of Porous Nanostructured Materials for Optical Sensing and Photocatalytic Degradation of Nuclear Wastes"</em><br>
-    <a href="https://srv3.eulc.edu.eg/Eulc_v5/Libraries/start.aspx?fn=ApplySearch&ScopeID=&criteria1=2.&SearchText1=Alhindawy%2c+Islam+Gamal+Ibrahim+Ali" target="_blank">View Thesis</a></p>
-    
-    <p><strong>M.Sc. in Chemistry (Materials Processing and Environmental Applications) (2020)</strong><br>
-    Faculty of Science, Menofia University, Egypt<br>
-    <em>Thesis: "Studies on Zircon Mineral Processing for Direct Fabrication of Mesoporous ZrP Nanostructured for Radioactive Species Removal"</em><br>
-    <a href="https://srv3.eulc.edu.eg/Eulc_v5/Libraries/start.aspx?fn=ApplySearch&ScopeID=&SearchText1=Studies+on+Zircon+Mineral+Processing+for+Direct+Fabrication+of+Mesoporous+Zrp+Nanostrctured+for+Radioactive+Species+Removal+%2f&criteria1=0" target="_blank">View Thesis</a></p>
-    
-    <p><strong>B.Sc. in Chemistry (2006)</strong><br>
-    Faculty of Science, Minia University, Egypt</p>
-    
-    <p><strong>American University of Armenia Fellowship (2025)</strong><br>
-    Sustainability in Decommissioning & Environmental Projects</p>`,
+                <p><strong>Ph.D. in Chemistry / Materials Science (2022)</strong><br>
+                Faculty of Science, Ain Shams University, Egypt<br>
+                <em>Thesis: "Design and Synthesis of Porous Nanostructured Materials for Optical Sensing and Photocatalytic Degradation of Nuclear Wastes"</em><br>
+                <a href="https://srv3.eulc.edu.eg/Eulc_v5/Libraries/start.aspx?fn=ApplySearch&ScopeID=&criteria1=2.&SearchText1=Alhindawy%2c+Islam+Gamal+Ibrahim+Ali" target="_blank">View Thesis</a></p>
+                <p><strong>M.Sc. in Chemistry (Materials Processing and Environmental Applications) (2020)</strong><br>
+                Faculty of Science, Menofia University, Egypt<br>
+                <em>Thesis: "Studies on Zircon Mineral Processing for Direct Fabrication of Mesoporous ZrP Nanostructured for Radioactive Species Removal"</em><br>
+                <a href="https://srv3.eulc.edu.eg/Eulc_v5/Libraries/start.aspx?fn=ApplySearch&ScopeID=&SearchText1=Studies+on+Zircon+Mineral+Processing+for+Direct+Fabrication+of+Mesoporous+Zrp+Nanostrctured+for+Radioactive+Species+Removal+%2f&criteria1=0" target="_blank">View Thesis</a></p>
+                <p><strong>B.Sc. in Chemistry (2006)</strong><br>Faculty of Science, Minia University, Egypt</p>
+                <p><strong>American University of Armenia Fellowship (2025)</strong><br>Sustainability in Decommissioning & Environmental Projects</p>`,
+            experience: `<h2>Career Experience</h2><p>Content to be added.</p>`,
             skills: `<h2>Technical Skillsets</h2><p>Content to be added.</p>`,
             patents: `<h2>Patents & Innovation</h2><p>Content to be added.</p>`,
             publications: `<h2>Research Publications</h2><p>Content to be added.</p>`,
@@ -103,7 +92,8 @@
         };
 
         function openModal(key) {
-            document.getElementById('modalBody').innerHTML = contentData[key];
+            const body = document.getElementById('modalBody');
+            body.innerHTML = contentData[key] || "<h2>Coming Soon</h2>";
             document.getElementById('mainModal').style.display = 'flex';
         }
     </script>
