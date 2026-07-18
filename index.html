@@ -298,7 +298,7 @@
 
         function openModal(key) {
             const body = document.getElementById('modalBody');
-            if (contentData[key]) {
+            if (contentData.hasOwnProperty(key)) {
                 body.innerHTML = contentData[key];
             } else {
                 body.innerHTML = "<h2>Coming Soon</h2>";
