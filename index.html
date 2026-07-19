@@ -381,6 +381,24 @@
             }
             document.getElementById('mainModal').style.display = 'flex';
         }
+
+        let currentImageIndex = 0;
+        function expandImage(src) {
+            const imgArray = Array.from(document.querySelectorAll('#modalBody img'));
+            currentImageIndex = imgArray.findIndex(img => img.src === src);
+            document.getElementById('fullImage').src = src;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        function changeImage(step) {
+            const imgArray = Array.from(document.querySelectorAll('#modalBody img'));
+            currentImageIndex = (currentImageIndex + step + imgArray.length) % imgArray.length;
+            document.getElementById('fullImage').src = imgArray[currentImageIndex].src;
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
     </script>
 </body>
 </html>
